@@ -1,0 +1,4 @@
+https://api.nomics.com/v1/currencies/ticker?key=130148d67461596e5e1a88516989a29b1a8c2c5b&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&platform-currency=ETH&per-page=100&page=1
+
+https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false <using>
+
