@@ -1,11 +1,237 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    color: rgba(0, 0, 0, 0.679);
+}
+
+#root {
+    background-image: url('./../assets/background.jpg');
+    background-size: cover;
+    width: auto;
+    height: 100%;
+}
+
+.header {
+   letter-spacing: 0.8rem;
+   padding: 20px;
+   color: #ff0000;
+   font-size: 20px;
+   text-align: center;
+   border-bottom: 2px solid rgb(129, 129, 129);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    border-bottom: 0.5px dotted rgb(129, 129, 129);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 4px;
+}
+
+.nav-link {
+    text-transform: capitalize;
+    color: #ff0000;
+    text-decoration: none;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+.news-link {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    color: #ff0000;
+    text-decoration: none;
+    letter-spacing: 4px;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(68, 227, 100, 0.468);
+    transition: 0.2s ease-in-out;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(15, 13, 13);
+}
+
+input {
+    background: rgba(11, 181, 45, 0.468);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.table-container {
+    padding: 20px;
+    background: rgba(50, 49, 49, 0.679);
+    text-transform: capitalize;
+}
+
+.con-header {
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #ff00003a;
+    display: grid;
+    grid-template-columns: 40px 80px auto auto ;
+}
+.table-header {
+    color: rgb(144, 231, 14);
+}
+
+.con-data {
+    display: grid;
+    grid-template-columns: 40px 80px auto auto ;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.385);
+    border-bottom: 1px dotted rgba(16, 173, 71, 0.504);
+}
+
+.news-data {
+    display: grid;
+    grid-template-columns: 80px auto auto ;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.385);
+    border-bottom: 1px dotted rgba(16, 173, 71, 0.504);
+}
+
+.table-data {
+    color: rgb(181, 144, 11);
+    font-size: 15px;
+}
+
+.news-table-data {
+    color: rgb(181, 144, 11);
+    font-size: 15px;
+}
+
+.price {
+    text-align: end;
+}
+
+.name-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.coin-img {
+    width: 30px;
+    padding: 20px;
+}
+
+.timlineDiv {
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.timlineList {
+    display: inline-flex;
+    flex-direction: column;
+    width: 350px;
+    margin-bottom: 20px;
+    margin: 10px;
+    text-align: start;
+    padding: 5px;
+    background: #5e5e5e;
+    color: rgb(52, 255, 11);
+}
+
+.newsImage {
+    width: 350px;
+}
+
+.new-link-fullStory {
+    font-style: italic;
+    color: #ff0000;
+}
+
+.newsTitle {
+    border-bottom: 2px dotted rgb(107, 128, 0);
+}
+
+
+@media screen and (max-width: 523px) {
+    .news-data {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .news-table-data {
+        padding-bottom: 5px;
+    }
     
 }
 
- 
+@media screen and (max-width: 700px) {}
+
+@media screen and (max-width: 400px) {
+    .header {
+        letter-spacing: 1px;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 2px solid rgb(129, 129, 129);
+     }
+
+     .nav {
+        margin-left: 10px;
+        margin-right: 10px;
+     }
+
+     a {
+        letter-spacing: 2px;
+     }
+
+     .con-header {
+        grid-template-columns: 20px 60px auto auto ;
+    }
+
+     .news-header {
+        grid-template-columns: 20px 60px auto auto ;
+    }
+
+     .con-data {
+         grid-template-columns: 20px 60px auto auto ;
+     }
+
+     .coin-img {
+        width: 30px;
+    }
+
+    .timlineList {
+        width: 250px;
+    }
+
+    .newsImage {
+        width: 250px;
+    }
+}
