@@ -1,12 +1,12 @@
 import './style/style.scss';
 import { getData } from './fetch.js';
-import { newsData } from './newsfetch.js';
-import { timeData } from './timeLine.js';
+// import { newsData } from './newsfetch.js';
+// import { timeData } from './timeLine.js';
+// import { details } from "./details.js";
 
-timeData();
-newsData();
+// timeData();
+// newsData();
 getData();
-
 
 const crypto = document.getElementById('crypto');
 const cryptoNews = document.getElementById('cryptoNews');

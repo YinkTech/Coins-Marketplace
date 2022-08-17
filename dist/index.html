@@ -17,7 +17,7 @@
       </nav>
       <section class="search-box">
         <form action="">
-            <input type="search" id="coinName" placeholder="Search By Coin Name">
+            <input type="search" id="coinsearch" placeholder="Search By Coin Name">
         </form>
       </section>
 
@@ -30,7 +30,6 @@
                     <a class="table-header price" > Current Price </a>
                 </div>
             <div id="coinDetails">
-
             </div>
         </div>
       </section>
@@ -56,9 +55,34 @@
 </section>
 
 </div>
-     
-     
+
+<div id="overlay" class="overlay">
+  <div id="text" class="overlay-text">
+    <i class="bi bi-x-circle-fill icon" id="closeUp"></i>
+    <div class="detail-img-cont">
+      <img src="https://assets.coingecko.com/coins/images/12124/large/Curve.png?1597369484" alt="detail-img" class="detail-img">
+    </div>
+    <div>
+      <p>
+        <span>Name: </span>
+        <span>Name</span>
+      </p>
+  
+      <p>
+        <span>Name: </span>
+        <span>Name</span>
+      </p>
+  
+      <p>
+        <span>Name: </span>
+        <span>Name</span>
+      </p>
+    </div>
+  
+  </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="bundle.js"></script>
 </body>
 </html>
+<input type="text" hidden>

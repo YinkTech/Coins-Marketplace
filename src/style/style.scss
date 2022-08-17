@@ -1,3 +1,6 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+.ola{color:#008751;}
+
 * {
     margin: 0;
     padding: 0;
@@ -107,7 +110,7 @@ input::placeholder {
 
 .con-data {
     display: grid;
-    grid-template-columns: 40px 80px auto auto ;
+    grid-template-columns: 40px 80px auto auto;
     align-items: center;
     background: rgba(0, 0, 0, 0.385);
     border-bottom: 1px dotted rgba(16, 173, 71, 0.504);
@@ -133,6 +136,23 @@ input::placeholder {
 
 .price {
     text-align: end;
+}
+
+.button {
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 2px;
+    background: rgba(50, 49, 49, 0.815);
+    color: rgb(181, 144, 11);
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: rgb(54, 157, 241);
+    transition: 0.5s ease-in-out;
 }
 
 .name-logo {
@@ -178,6 +198,33 @@ input::placeholder {
     border-bottom: 2px dotted rgb(107, 128, 0);
 }
 
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.overlay-text{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+}
+
+
+.detail-img-cont {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border: 3px double #fff;
+}
 
 @media screen and (max-width: 523px) {
     .news-data {
