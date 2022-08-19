@@ -67,10 +67,12 @@ export const displayCoins = (data) => {
                        <span class="table-data price"> ${formatToCurrency(item.current_price)}</span>
                     </div>`
                     const overlay = document.getElementById('overlay');
+                    const down = document.getElementById('coinDlist');
                     li.innerHTML = row;
                     li.onclick = ()=>{
                             details(item.id)
                             overlay.style.display = 'block';
+                            down.style.display = 'none';
                     };
                 ul.appendChild(li)
     };
