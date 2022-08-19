@@ -1,11 +1,11 @@
 import './style/style.scss';
 import { getData } from './fetch.js';
-// import { newsData } from './newsfetch.js';
-// import { timeData } from './timeLine.js';
-// import { details } from "./details.js";
+import { newsData } from './newsfetch.js';
+import { timeData } from './timeLine.js';
+import { details } from "./details.js";
 
-// timeData();
-// newsData();
+timeData();
+newsData();
 getData();
 
 const crypto = document.getElementById('crypto');
@@ -24,4 +24,11 @@ crypto.addEventListener('click', () => {
 cryptoNews.addEventListener('click', () => {
     coinList.style.display = 'none';
     newsLst.style.display = 'block';
+});
+
+const close = document.getElementById('closeUp');
+const overlay = document.getElementById('overlay');
+close.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    location.reload();
 });

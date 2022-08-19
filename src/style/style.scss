@@ -13,16 +13,18 @@ body {
 }
 
 #root {
-    background-image: url('./../assets/background.jpg');
+    //background-image: url('./../assets/background.jpg');
     background-size: cover;
     width: auto;
     height: 100%;
 }
 
 .header {
+    text-transform: uppercase;
    letter-spacing: 0.8rem;
    padding: 20px;
-   color: #ff0000;
+   background: #000;
+   color: #fff;
    font-size: 20px;
    text-align: center;
    border-bottom: 2px solid rgb(129, 129, 129);
@@ -44,8 +46,10 @@ a {
 }
 
 .nav-link {
+    font-size: 20px;
+    font-weight: bolder;
     text-transform: capitalize;
-    color: #ff0000;
+    color: #000;
     text-decoration: none;
     letter-spacing: 4px;
     cursor: pointer;
@@ -63,7 +67,7 @@ a {
 .nav-link:hover {
     text-decoration: none;
     font-size: 20px;
-    color: rgba(68, 227, 100, 0.468);
+    color: rgb(68, 227, 100);
     transition: 0.2s ease-in-out;
 }
 
@@ -74,14 +78,28 @@ a {
     border-bottom: 1px solid rgb(15, 13, 13);
 }
 
-input {
-    background: rgba(11, 181, 45, 0.468);
-    color: #fff;
+.input {
+    color: #000;
     border: none;
-    border-radius: 20px;
     text-align: center;
-    padding: 10px;
+    align-items: center;
+    padding: 15px;
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    padding: 5px;
+    border: 1px dotted #000;
+    border-radius: 20px 0px 20px 0px;
+    text-align: center;
+    background-color: none;
+
+}
+
+.search-icon {
+    padding: 5px;
 }
 
 input:focus {
@@ -89,48 +107,56 @@ input:focus {
 }
 
 input::placeholder {
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .table-container {
     padding: 20px;
-    background: rgba(50, 49, 49, 0.679);
     text-transform: capitalize;
 }
 
 .con-header {
+    margin-top: 20px;
     margin-bottom: 20px;
     border-bottom: 1px dotted #ff00003a;
     display: grid;
+    font-weight: bolder;
+    font-size: 20px;
     grid-template-columns: 40px 80px auto auto ;
 }
+
 .table-header {
-    color: rgb(144, 231, 14);
+    color: #000;
+    font-weight: bolder;
 }
 
 .con-data {
     display: grid;
     grid-template-columns: 40px 80px auto auto;
     align-items: center;
-    background: rgba(0, 0, 0, 0.385);
-    border-bottom: 1px dotted rgba(16, 173, 71, 0.504);
+    border-bottom: 2px dotted #000;
 }
 
 .news-data {
     display: grid;
     grid-template-columns: 80px auto auto ;
     align-items: center;
-    background: rgba(0, 0, 0, 0.385);
     border-bottom: 1px dotted rgba(16, 173, 71, 0.504);
 }
 
 .table-data {
-    color: rgb(181, 144, 11);
+    color: #000;
+    font-weight: bolder;
     font-size: 15px;
 }
 
+.table-data:hover {
+    cursor: pointer;
+}
+
 .news-table-data {
-    color: rgb(181, 144, 11);
+    color: #000;
+    font-weight: bolder;
     font-size: 15px;
 }
 
@@ -199,6 +225,7 @@ input::placeholder {
 }
 
 .overlay {
+    background: #fff;
     position: fixed;
     display: none;
     width: 100%;
@@ -207,23 +234,55 @@ input::placeholder {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
     z-index: 2;
     cursor: pointer;
+    text-align: center;
 }
 
 .overlay-text{
     position: absolute;
     font-size: 50px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
+.icon {
+    font-size: 30px;
+    color: #000;
+}
+
+.detail-cont {
+    display: flex;
+}
+
+.details-cont {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.details-data {
+    margin-bottom: 5px;
+}
+
+.link-details {
+    color: #075234;
+}
+
+.link-det {
+    color: #008751;
+}
 
 .detail-img-cont {
-    margin-top: 20px;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border: 3px double #fff;
+}
+
+.decription {
+    font-size: 15px;
+    text-align: start;
+    padding: 10px;
+    color: rgb(181, 144, 11);
 }
 
 @media screen and (max-width: 523px) {
@@ -236,12 +295,16 @@ input::placeholder {
     .news-table-data {
         padding-bottom: 5px;
     }
+
+    .details-data {
+        margin-bottom: 3px;
+    }
     
 }
 
 @media screen and (max-width: 700px) {}
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .header {
         letter-spacing: 1px;
         padding: 10px;
@@ -260,6 +323,7 @@ input::placeholder {
 
      .con-header {
         grid-template-columns: 20px 60px auto auto ;
+        font-size: 15px;
     }
 
      .news-header {
@@ -280,5 +344,10 @@ input::placeholder {
 
     .newsImage {
         width: 250px;
+    }
+
+    .detail-img-cont {
+        width: 70px;
+        height: 70px;
     }
 }

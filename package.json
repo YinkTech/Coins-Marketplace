@@ -7,7 +7,8 @@
     "build": "webpack",
     "start": "webpack serve --open",
     "watch": "webpack --watch",
-    "babel": "babel src -d lib"
+    "babel": "babel src -d lib",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "sass": "^1.54.3",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
