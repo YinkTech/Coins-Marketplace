@@ -9,11 +9,11 @@
 <body>
 <div id="root">
      <header class="header">
-        <b>Cryptocurrencies Marketplace</b>
+        <b>Cryptocurrencies <i class="bi bi-currency-bitcoin icon-header"> </i> Marketplace</b>
       </header>
       <nav class="nav">
-        <a class="nav-link" id="crypto">cryptocurrencies</a> 
-        <a class="nav-link" id="cryptoNews"> news</a>
+        <a class="nav-link" id="crypto"><i class="bi bi-cash-coin search-icon"></i> Coins</a> 
+        <a class="nav-link" id="cryptoNews"><i class="bi bi-newspaper search-icon"></i> news</a>
       </nav>
       <section class="search-box">
         <form action="" class="input">
@@ -23,13 +23,14 @@
 
       <section class="table-container" id="coinDlist">
         <div>
+           <h3 class="total-coins"> Total coins Displayed =  <span id="counts"></span></h3>
                 <div class="con-header">
-                    <a class="table-header" > # </a>
+                    <a class="table-header" > <i class="bi bi-bullseye"></i> </a>
                     <a class="table-header" >  </a>
                     <a class="table-header" > name </a>
                     <a class="table-header price" > Current Price </a>
                 </div>
-            <div id="coinDetails">
+                <div id="coinDetails">
             </div>
         </div>
       </section>
