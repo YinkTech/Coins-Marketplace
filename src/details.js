@@ -15,43 +15,29 @@ export const details = (coinId) => {
 export const idDeatils = (data) => {
     const coinist = document.getElementById('detail-cont');
     for (let i = 0; i < data.length; i++){
+        const itemsList = data[i];
             var  rows = `<div class="details-cont">
-                        <span class="details-data"><img src='${data[i].image.large}' class="detail-img-cont"></span>
-                        <span class="details-data link-details"> ${data[i].symbol}  •¦•  ${data[i].name}</span>
-                        <span class="details-data link-details">Genesis Date •• ${data[i].genesis_date}  ••</span>
-                        <span class="details-data"> <a href="${data[i].subreddit_url}" class="link-det" target="_blank"> Sub Reddit </a></span>
-                        <span class="details-data"> <a href="${data[i].links.repos_url.github[1]}" class="link-det" target="_blank">  Github Repo</a> •¦• <a href="https://www.facebook.com/${data[i].links.facebook_username}" class="link-det" target="_blank">Facebook Page</a></span>
-                        <span class="details-data"> <a href="${data[i].links.homepage[0]}" class="link-det" target="_blank"> ${data[i].name}.com</a></span>
-                        <span class="details-data"> <a href="${data[i].links.blockchain_site[0]}" class="link-det" target="_blank"> Blockchain Site </a></span>
-                        <span class="details-data link-details">Votes Percentage Down¦ ${data[i].sentiment_votes_down_percentage} ↓↓</span>
-                        <span class="details-data link-details">Votes Percentage Up¦ ${data[i].sentiment_votes_up_percentage} ⇈</span>
-                        <span class="decription">${data[i].description.en}</span>
+                        <span class="details-data"><img src='${itemsList.image.large}' class="detail-img-cont"></span>
+                        <span class="details-data link-details"> ${itemsList.symbol}  •¦•  ${itemsList.name}</span>
+                        <span class="details-data link-details">Genesis Date <i class="bi bi-arrows-collapse"></i> ${itemsList.genesis_date}  <i class="bi bi-calendar-plus"></i> </span>
+                        <span class="details-data detailsRed"> <a href="${itemsList.subreddit_url}" class="link-det" target="_blank"> Sub Reddit </a> <i class="bi bi-reddit"></i>  </span>
+                        <span class="details-data detailsGit"> <a href="${itemsList.links.repos_url.github[1]}" class="link-det" target="_blank">  Github </a> <i class="bi bi-github"></i>  </span>
+                        <span class="details-data detailsFace">  <a href="https://www.facebook.com/${itemsList.links.facebook_username}" class="link-det" target="_blank">Facebook </a> <i class="bi bi-facebook"></i> </span>
+                        <span class="details-data detailsWeb"> <a href="${itemsList.links.homepage[0]}" class="link-det" target="_blank"> ${itemsList.name}.com</a> <i class="bi bi-link-45deg"></i> </span>
+                        <span class="details-data detailsDes"> <a href="${itemsList.links.blockchain_site[0]}" class="link-det" target="_blank"> Blockchain Site </a>  <i class="bi bi-link-45deg"></i> </span>
+                        <span class="details-data link-details votesDown">Votes <i class="bi bi-graph-down-arrow"></i> ${itemsList.sentiment_votes_down_percentage} % </span>
+                        <span class="details-data link-details votesUp">Votes <i class="bi bi-graph-up-arrow"></i> ${itemsList.sentiment_votes_up_percentage} % </span>
+                        <span class="decription-show">Read About ${itemsList.name}  <i class="bi bi-three-dots"></i>  <i class="bi bi-arrow-down-circle"></i></span>
+                        <span class="decription">${itemsList.description.en}</span>
                         
                         </div>`
-        coinist.innerHTML += rows
-    }
-
-
-// export const idDeatils = (data) => {
-    // const newsList = document.getElementById('newsDetails');
-    // const newsDetails = data.coins.map(coin => {
-    //     return 
-    // });
-    // newsList.insertAdjacentHTML("beforeend", newsDetails);
+        coinist.innerHTML += rows;
+        const decription = document.querySelector('.decription');
+        decription.style.display = 'none';
+        const decriptionShow = document.querySelector('.decription-show');
+        decriptionShow.addEventListener('click', () => {
+                decription.style.display = 'block';
+                decriptionShow.style.display = 'none';
+            });
+    };
 }
-//     // const formatToCurrency = amount => {
-//     //     return "$ " + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
-//     // };
-    
-//    const coinist = document.getElementById('detail-cont');
-    
-//     for (let i = 0; i < data.length; i++){
-//         const item = data[i];
-//         const row = `<div class="con-data" id='${item.id}'>
-//                        <span class="table-data">${item.market_cap_rank}</span>
-//                        <span class="table-data">${item.symbol}</span>
-//                        <span class="table-data">  ${item.name}</span>
-//                     </div>`
-//                     coinist.innerHTML += row;
-//     };
-// };

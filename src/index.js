@@ -32,3 +32,4 @@ close.addEventListener('click', () => {
     overlay.style.display = 'none';
     location.reload();
 });
+

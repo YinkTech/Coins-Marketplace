@@ -1,4 +1,5 @@
 import { details } from "./details.js";
+import { counter } from "./counter.js"
 let rawData = [];
 let filteredData = [];
 export const getData = () => {
@@ -56,16 +57,19 @@ export const displayCoins = (data) => {
         return "$ " + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
     };
    const coinsList = document.getElementById('coinDetails');
+   const count = document.getElementById('counts');
    const ul = document.createElement("div");
     for (let i = 0; i < data.length; i++){
         const item = data[i];
         const li= document.createElement("div")
+        const countof = counter(data)
         const row = `<div class="con-data" id='${item.id}'>
                        <span class="table-data">${item.market_cap_rank}</span>
                        <span class="table-data"><img src="${item.image}" class="coin-img" alt="coin-image"></span>
                        <span class="table-data">  ${item.name}</span>
                        <span class="table-data price"> ${formatToCurrency(item.current_price)}</span>
                     </div>`
+                    count.innerHTML = countof;
                     const overlay = document.getElementById('overlay');
                     const down = document.getElementById('coinDlist');
                     li.innerHTML = row;
@@ -78,3 +82,5 @@ export const displayCoins = (data) => {
     };
                 coinsList.appendChild(ul)
 };
+
+/* eslint-enable import/no-cycle, consistent-return */

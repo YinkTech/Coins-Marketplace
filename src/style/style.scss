@@ -21,13 +21,20 @@ body {
 
 .header {
     text-transform: uppercase;
-   letter-spacing: 0.8rem;
-   padding: 20px;
-   background: #000;
-   color: #fff;
-   font-size: 20px;
-   text-align: center;
-   border-bottom: 2px solid rgb(129, 129, 129);
+    letter-spacing: 0.8rem;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgb(129, 129, 129);
+}
+
+.icon-header {
+    color: #4ae423;
+    outline: #e6ffed;
+    font-size: 30px;
+    text-align: center;
 }
 
 .nav {
@@ -49,7 +56,7 @@ a {
     font-size: 20px;
     font-weight: bolder;
     text-transform: capitalize;
-    color: #000;
+    color: rgb(61, 80, 17);
     text-decoration: none;
     letter-spacing: 4px;
     cursor: pointer;
@@ -91,7 +98,7 @@ a {
 
 input {
     padding: 5px;
-    border: 1px dotted #000;
+    border: 1px dotted #4ae423;
     border-radius: 20px 0px 20px 0px;
     text-align: center;
     background-color: none;
@@ -100,6 +107,7 @@ input {
 
 .search-icon {
     padding: 5px;
+    color: #4ae423;
 }
 
 input:focus {
@@ -126,7 +134,7 @@ input::placeholder {
 }
 
 .table-header {
-    color: #000;
+    color: #008000c0;
     font-weight: bolder;
 }
 
@@ -134,14 +142,14 @@ input::placeholder {
     display: grid;
     grid-template-columns: 40px 80px auto auto;
     align-items: center;
-    border-bottom: 2px dotted #000;
+    border-bottom: 2px dotted #4ae423;
 }
 
 .news-data {
     display: grid;
     grid-template-columns: 80px auto auto ;
     align-items: center;
-    border-bottom: 1px dotted rgba(16, 173, 71, 0.504);
+    border-bottom: 1px dotted #4ae423;
 }
 
 .table-data {
@@ -225,7 +233,6 @@ input::placeholder {
 }
 
 .overlay {
-    background: #fff;
     position: absolute;
     display: none;
     width: 100%;
@@ -235,23 +242,33 @@ input::placeholder {
     right: 0;
     bottom: 0;
     z-index: 2;
-    cursor: pointer;
     text-align: center;
+    background-color: #fff;
 }
 
 .overlay-text{
     position: absolute;
     font-size: 50px;
     color: rgb(0, 0, 0);
+    margin: auto;
+    border-radius: 50px 5px 5px 20px;
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
 }
 
 .icon {
     font-size: 30px;
     color: #000;
+    margin: 20px;
+    text-align: end;
+    cursor: pointer;
 }
 
 .detail-cont {
+    padding: 10px;
     display: flex;
+    justify-content: space-evenly;
 }
 
 .details-cont {
@@ -261,7 +278,7 @@ input::placeholder {
 }
 
 .details-data {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .link-details {
@@ -269,13 +286,85 @@ input::placeholder {
 }
 
 .link-det {
-    color: #008751;
+    color: inherit;
 }
 
 .detail-img-cont {
     width: 150px;
     height: 150px;
     border: 3px double #fff;
+}
+
+.detailsDes {
+    background: #123962;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    width: fit-content;
+    align-self: center;
+}
+
+.detailsWeb {
+    background: #62125d;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    width: fit-content;
+    align-self: center;
+}
+
+.detailsFace {
+    background: #4267B2;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    width: fit-content;
+    align-self: center;
+}
+
+.detailsGit {
+    background: #171515 ;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    width: fit-content;
+    align-self: center;
+}
+
+.detailsRed {
+    background: #ff4500 ;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    width: fit-content;
+    align-self: center;
+}
+
+.votesDown {
+    background: #ff0000 ;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    width: fit-content;
+    align-self: center;
+}
+
+.votesUp {
+    background: #0dc00a ;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    width: fit-content;
+    align-self: center;
+}
+
+.decription-show {
+    background: #124184;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    width: fit-content;
+    align-self: center;
 }
 
 .decription {
@@ -285,7 +374,19 @@ input::placeholder {
     color: rgb(181, 144, 11);
 }
 
+.total-coins {
+    background: #e6ffed;
+    padding: 5px;
+    border-radius: 10px;
+    width: fit-content;
+    color: #555;
+}
+
 @media screen and (max-width: 523px) {
+    .icon-header {
+        display: block;
+    }
+
     .news-data {
         display: flex;
         align-items: center;
@@ -297,12 +398,10 @@ input::placeholder {
     }
 
     .details-data {
-        margin-bottom: 3px;
+        margin-bottom: 7px;
     }
     
 }
-
-@media screen and (max-width: 700px) {}
 
 @media screen and (max-width: 420px) {
     .header {
