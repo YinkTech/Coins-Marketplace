@@ -70,7 +70,7 @@ a {
 }
 
 .nav-icon {
-    display: none;
+  display: none;
   text-align: end;
   font-size: 30px;
   font-weight: bolder;
@@ -139,7 +139,7 @@ input::placeholder {
 .con-header {
   margin-top: 20px;
   margin-bottom: 20px;
-  border-bottom: 1px dotted #f003a;
+  border-bottom: 1px dotted #ff003a;
   display: grid;
   font-weight: bolder;
   font-size: 20px;
@@ -211,7 +211,7 @@ input::placeholder {
 .nav-cont {
   display: flex;
   justify-content: space-between;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .coin-img {
@@ -276,7 +276,7 @@ input::placeholder {
   border-radius: 50px 5px 5px 20px;
   display: flex;
   flex-direction: column;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .icon {
