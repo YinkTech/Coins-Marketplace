@@ -1,5 +1,4 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
-.ola{color:#008751;}
 
 * {
     margin: 0;
@@ -8,12 +7,11 @@
 
 body {
     box-sizing: border-box;
-    font-family: "Lato", sans-serif;
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
     color: rgba(0, 0, 0, 0.679);
 }
 
 #root {
-    //background-image: url('./../assets/background.jpg');
     background-size: cover;
     width: auto;
     height: 100%;
@@ -71,6 +69,22 @@ a {
     letter-spacing: 4px;
 }
 
+.nav-icon {
+    text-align: end;
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(66, 252, 15);
+    cursor: pointer;
+}
+
+.nav-icon2 {
+    text-align: end;
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(66, 252, 15);
+    cursor: pointer;
+}
+
 .nav-link:hover {
     text-decoration: none;
     font-size: 20px;
@@ -102,7 +116,6 @@ input {
     border-radius: 20px 0px 20px 0px;
     text-align: center;
     background-color: none;
-
 }
 
 .search-icon {
@@ -130,7 +143,7 @@ input::placeholder {
     display: grid;
     font-weight: bolder;
     font-size: 20px;
-    grid-template-columns: 40px 80px auto auto ;
+    grid-template-columns: 40px 80px auto auto;
 }
 
 .table-header {
@@ -147,7 +160,7 @@ input::placeholder {
 
 .news-data {
     display: grid;
-    grid-template-columns: 80px auto auto ;
+    grid-template-columns: 80px auto auto;
     align-items: center;
     border-bottom: 1px dotted #4ae423;
 }
@@ -195,6 +208,15 @@ input::placeholder {
     justify-content: space-between;
 }
 
+.nav-cont {
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+}
+
+.nav-icon {
+    display: none;
+}
 
 .coin-img {
     width: 30px;
@@ -243,7 +265,11 @@ input::placeholder {
     bottom: 0;
     z-index: 2;
     text-align: center;
-    background-color: #fff;
+    background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.729), rgba(255, 255, 255, 0.838)),
+    url('../assets/cryptocurrency-logos-svg-g09.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .overlay-text{
@@ -323,7 +349,7 @@ input::placeholder {
 }
 
 .detailsGit {
-    background: #171515 ;
+    background: #171515;
     border-radius: 10px;
     padding: 10px;
     color: #fff;
@@ -332,7 +358,7 @@ input::placeholder {
 }
 
 .detailsRed {
-    background: #ff4500 ;
+    background: #ff4500;
     border-radius: 10px;
     padding: 10px;
     color: #fff;
@@ -341,7 +367,7 @@ input::placeholder {
 }
 
 .votesDown {
-    background: #ff0000 ;
+    background: #ff0000;
     border-radius: 10px;
     padding: 10px;
     color: #fff;
@@ -350,7 +376,7 @@ input::placeholder {
 }
 
 .votesUp {
-    background: #0dc00a ;
+    background: #0dc00a;
     border-radius: 10px;
     padding: 10px;
     color: #fff;
@@ -365,13 +391,24 @@ input::placeholder {
     color: #fff;
     width: fit-content;
     align-self: center;
+    cursor: pointer;
+}
+
+.decription-hide {
+    background: #124184;
+    border-radius: 10px;
+    padding: 3px;
+    color: #fff;
+    width: fit-content;
+    align-self: center;
+    cursor: pointer;
 }
 
 .decription {
     font-size: 20px;
     text-align: start;
     padding: 10px;
-    color: rgb(181, 144, 11);
+    color: #075234;
 }
 
 .total-coins {
@@ -384,6 +421,25 @@ input::placeholder {
 
 @media screen and (max-width: 523px) {
     .icon-header {
+        display: block;
+    }
+
+    .nav {
+        flex-direction: column-reverse;
+        background: rgba(236, 232, 232, 0.421);
+    }
+
+    .nav-cont {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-link {
+        text-align: end;
+        margin-top: 10px;
+    }
+
+    .nav-icon {
         display: block;
     }
 
@@ -401,6 +457,10 @@ input::placeholder {
         margin-bottom: 7px;
     }
     
+    .navIcon {
+        font-size: 40px;
+        text-align: right;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -409,31 +469,31 @@ input::placeholder {
         padding: 10px;
         text-align: center;
         border-bottom: 2px solid rgb(129, 129, 129);
-     }
+    }
 
-     .nav {
+    .nav {
         margin-left: 10px;
         margin-right: 10px;
      }
 
-     a {
+    a {
         letter-spacing: 2px;
-     }
+    }
 
-     .con-header {
-        grid-template-columns: 20px 60px auto auto ;
+    .con-header {
+        grid-template-columns: 20px 60px auto auto;
         font-size: 15px;
     }
 
-     .news-header {
-        grid-template-columns: 20px 60px auto auto ;
+    .news-header {
+        grid-template-columns: 20px 60px auto auto;
     }
 
-     .con-data {
-         grid-template-columns: 20px 60px auto auto ;
-     }
+    .con-data {
+        grid-template-columns: 20px 60px auto auto;
+    }
 
-     .coin-img {
+    .coin-img {
         width: 30px;
     }
 

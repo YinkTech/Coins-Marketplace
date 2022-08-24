@@ -33,3 +33,20 @@ close.addEventListener('click', () => {
     location.reload();
 });
 
+const navIcon = document.querySelector('.nav-icon');
+const navIconsec = document.querySelector('.nav-icon2');
+    navIconsec.style.display = 'none';
+const navLink = document.querySelector('.nav-cont');
+
+navIcon.addEventListener('click', () => {
+    navIconsec.style.display = 'block';
+    navLink.style.display = 'flex';
+    navIcon.style.display = 'none';
+});
+
+navIconsec.addEventListener('click', () => {
+    navIcon.style.display = 'block';
+    navLink.style.display = 'none';
+    navIconsec.style.display = 'none';
+    location.reload();
+});
