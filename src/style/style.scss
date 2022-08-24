@@ -262,8 +262,8 @@ input::placeholder {
   z-index: 2;
   text-align: center;
   background-image:
-  linear-gradient(to bottom, rgba(255, 255, 255, 0.729), rgba(255, 255, 255, 0.838)),
-  url('../assets/cryptocurrency-logos-svg-g09.png');
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.729), rgba(255, 255, 255, 0.838)),
+    url('../assets/cryptocurrency-logos-svg-g09.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -470,7 +470,7 @@ input::placeholder {
   .nav {
     margin-left: 10px;
     margin-right: 10px;
-   }
+  }
 
   a {
     letter-spacing: 2px;
