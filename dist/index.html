@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryto MarketPlace</title>
+</head>
+<body>
+<div id="root">
+     <header class="header">
+        <b>Cryptocurrencies <i class="bi bi-currency-bitcoin icon-header"> </i> Marketplace</b>
+      </header>
+      <nav class="nav">
+        <div class="nav-cont">
+        <a class="nav-link" id="crypto"><i class="bi bi-cash-coin search-icon"></i> Coins</a> 
+        <a class="nav-link" id="cryptoNews"><i class="bi bi-newspaper search-icon"></i> news</a>
+        </div>
+        <i class="bi bi-list nav-icon"></i>
+        <i class="bi bi-list nav-icon2"></i>
+      </nav>
+      <section class="search-box">
+        <form action="" class="input">
+            <input type="search" autofocus id="coinsearch" placeholder="Search By Coin Name" ><i class="bi bi-search search-icon"></i>
+        </form>
+      </section>
+
+      <section class="table-container" id="coinDlist">
+        <div>
+           <h3 class="total-coins"> Total coins Displayed =  <span id="counts"></span></h3>
+                <div class="con-header">
+                    <a class="table-header" > <i class="bi bi-bullseye"></i> </a>
+                    <a class="table-header" >  </a>
+                    <a class="table-header" > name </a>
+                    <a class="table-header price" > Current Price </a>
+                </div>
+                <div id="coinDetails">
+            </div>
+        </div>
+      </section>
+
+<section id="newslive">
+
+
+<h1 class="header">News</h1>
+<h3 class="news-link">top 7 trending coin</h3>
+      <section class="table-container">
+        <div>
+            <div id="newsDetails">
+
+            </div>
+        </div>
+      </section>
+
+  <div class="timlineDiv" id="timlineDiv">
+    
+
+  </div>
+
+</section>
+
+</div>
+
+<div id="overlay" class="overlay">
+  <div id="text" class="overlay-text">
+    <i class="bi bi-x-circle-fill icon" id="closeUp"></i>
+    <div class="detail-cont" id="detail-cont">
+    
+    </div>
+  
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>
+<input type="text" hidden>

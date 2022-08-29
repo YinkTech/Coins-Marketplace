@@ -1,0 +1,508 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+  color: rgba(0, 0, 0, 0.679);
+}
+
+#root {
+  background-size: cover;
+  width: auto;
+  height: 100%;
+}
+
+.header {
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 2px solid rgb(129, 129, 129);
+}
+
+.icon-header {
+  color: #4ae423;
+  outline: #e6ffed;
+  font-size: 30px;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 10px;
+  border-bottom: 0.5px dotted rgb(129, 129, 129);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+
+.nav-link {
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: capitalize;
+  color: rgb(61, 80, 17);
+  text-decoration: none;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.news-link {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px;
+  color: #f00;
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+
+.nav-icon {
+  display: none;
+  text-align: end;
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(66, 252, 15);
+  cursor: pointer;
+}
+
+.nav-icon2 {
+  text-align: end;
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(66, 252, 15);
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(68, 227, 100);
+  transition: 0.2s ease-in-out;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid rgb(15, 13, 13);
+}
+
+.input {
+  color: #000;
+  border: none;
+  text-align: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  padding: 5px;
+  border: 1px dotted #4ae423;
+  border-radius: 20px 1px 20px 1px;
+  text-align: center;
+}
+
+.search-icon {
+  padding: 5px;
+  color: #4ae423;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.table-container {
+  padding: 20px;
+  text-transform: capitalize;
+}
+
+.con-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #ff003a;
+  display: grid;
+  font-weight: bolder;
+  font-size: 20px;
+  grid-template-columns: 40px 80px auto auto;
+}
+
+.table-header {
+  color: #008000c0;
+  font-weight: bolder;
+}
+
+.con-data {
+  display: grid;
+  grid-template-columns: 40px 80px auto auto;
+  align-items: center;
+  border-bottom: 2px dotted #4ae423;
+}
+
+.news-data {
+  display: grid;
+  grid-template-columns: 80px auto auto;
+  align-items: center;
+  border-bottom: 1px dotted #4ae423;
+}
+
+.table-data {
+  color: #000;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.table-data:hover {
+  cursor: pointer;
+}
+
+.news-table-data {
+  color: #000;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.price {
+  text-align: end;
+}
+
+.button {
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 2px;
+  background: rgba(50, 49, 49, 0.815);
+  color: rgb(181, 144, 11);
+  text-align: center;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: rgb(54, 157, 241);
+  transition: 0.5s ease-in-out;
+}
+
+.name-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-cont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.coin-img {
+  width: 30px;
+  padding: 20px;
+}
+
+.timlineDiv {
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.timlineList {
+  display: inline-flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 10px;
+  margin-bottom: 20px;
+  text-align: start;
+  padding: 5px;
+  background: #5e5e5e;
+  color: rgb(52, 255, 11);
+}
+
+.newsImage {
+  width: 350px;
+}
+
+.new-link-fullStory {
+  font-style: italic;
+  color: #f00;
+}
+
+.newsTitle {
+  border-bottom: 2px dotted rgb(107, 128, 0);
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.729), rgba(255, 255, 255, 0.838)),
+    url('../assets/cryptocurrency-logos-svg-g09.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overlay-text {
+  position: absolute;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  margin: auto;
+  border-radius: 50px 5px 5px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.icon {
+  font-size: 30px;
+  color: #000;
+  margin: 20px;
+  text-align: end;
+  cursor: pointer;
+}
+
+.detail-cont {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.details-cont {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-data {
+  margin-bottom: 10px;
+}
+
+.link-details {
+  color: #075234;
+}
+
+.link-det {
+  color: inherit;
+}
+
+.detail-img-cont {
+  width: 150px;
+  height: 150px;
+  border: 3px double #fff;
+}
+
+.detailsDes {
+  background: #123962;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  width: fit-content;
+  align-self: center;
+}
+
+.detailsWeb {
+  background: #62125d;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  width: fit-content;
+  align-self: center;
+}
+
+.detailsFace {
+  background: #4267b2;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  width: fit-content;
+  align-self: center;
+}
+
+.detailsGit {
+  background: #171515;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  width: fit-content;
+  align-self: center;
+}
+
+.detailsRed {
+  background: #ff4500;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  width: fit-content;
+  align-self: center;
+}
+
+.votesDown {
+  background: #f00;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  width: fit-content;
+  align-self: center;
+}
+
+.votesUp {
+  background: #0dc00a;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  width: fit-content;
+  align-self: center;
+}
+
+.decription-show {
+  background: #124184;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  width: fit-content;
+  align-self: center;
+  cursor: pointer;
+}
+
+.decription-hide {
+  background: #124184;
+  border-radius: 10px;
+  padding: 3px;
+  color: #fff;
+  width: fit-content;
+  align-self: center;
+  cursor: pointer;
+}
+
+.decription {
+  font-size: 20px;
+  text-align: start;
+  padding: 10px;
+  color: #075234;
+}
+
+.total-coins {
+  background: #e6ffed;
+  padding: 5px;
+  border-radius: 10px;
+  width: fit-content;
+  color: #555;
+}
+
+@media screen and (max-width: 523px) {
+  .icon-header {
+    display: block;
+  }
+
+  .nav {
+    flex-direction: column-reverse;
+    background: rgba(236, 232, 232, 0.421);
+  }
+
+  .nav-cont {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-link {
+    text-align: end;
+    margin-top: 10px;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+
+  .news-data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .news-table-data {
+    padding-bottom: 5px;
+  }
+
+  .details-data {
+    margin-bottom: 7px;
+  }
+
+  .navIcon {
+    font-size: 40px;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    letter-spacing: 1px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid rgb(129, 129, 129);
+  }
+
+  .nav {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  a {
+    letter-spacing: 2px;
+  }
+
+  .con-header {
+    grid-template-columns: 20px 60px auto auto;
+    font-size: 15px;
+  }
+
+  .news-header {
+    grid-template-columns: 20px 60px auto auto;
+  }
+
+  .con-data {
+    grid-template-columns: 20px 60px auto auto;
+  }
+
+  .coin-img {
+    width: 30px;
+  }
+
+  .timlineList {
+    width: 250px;
+  }
+
+  .newsImage {
+    width: 250px;
+  }
+
+  .detail-img-cont {
+    width: 70px;
+    height: 70px;
+  }
+}
